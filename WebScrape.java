@@ -13,7 +13,7 @@ import org.jsoup.nodes.Element;
 public class WebScrape {
     public static void main(String[] args) {
         final String url = 
-                "https://shares.telegraph.co.uk/indices/summary/index/MCX";
+                "https://sharestobeclosed.telegraph.co.uk/indices/financials/index/MCX";
         
         try {
             final Document document = Jsoup.connect(url).get();
@@ -32,9 +32,9 @@ public class WebScrape {
                            row.select("td.right:nth-of-type(3)").text();
                    final String tempPrice1 = 
                            tempPrice.replace(",", "");
-                   final double price = Double.parseDouble(tempPrice1);
+//                    final double price = Double.parseDouble(tempPrice1);
                    
-                    System.out.println(ticker + " " + name + " " + price);
+                    System.out.println(ticker + " " + name + " " + teamPrice1);
                 }
             }
         }
