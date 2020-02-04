@@ -34,7 +34,7 @@ public class WebScrape {
                            tempPrice.replace(",", "");
 //                    final double price = Double.parseDouble(tempPrice1);
                    
-                    System.out.println(ticker + " " + name + " " + teamPrice1);
+                    System.out.println(ticker + " " + name + " " + tempPrice1);
                 }
             }
         }
